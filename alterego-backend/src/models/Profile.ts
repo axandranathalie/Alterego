@@ -16,7 +16,7 @@ export interface IProfile extends Document {
 }
 
 const ProfileSchema = new Schema<IProfile>({
-  name: { type: String, required: true },
+  name: String,
   description: String,
   superpowers: [String],
   likes: [String],

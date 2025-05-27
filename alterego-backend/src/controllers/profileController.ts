@@ -8,6 +8,7 @@ export const createProfile = async (req: Request, res: Response) => {
   try {
     const profileData = {
       ...req.body,
+      name: req.body.name?.trim() || 'Anonym',
       color: req.body.color || getRandomColor(),
       emoji: req.body.emoji || getRandomEmoji()
     };
